@@ -26,22 +26,28 @@ export const Friend = styled.li`
   border-radius: 10px;
 `;
 
-export const Online = styled.div`
-  position: relative;
+export const ConditionOnline = styled.span`
   width: 20px;
   height: 20px;
-  background-color: var(--online);
   border-radius: 50%;
   box-shadow: var(--main-shadow);
+
+  background-color: ${props => {
+    switch (props.type){
+      case true:
+        return 'var(--online)'
+      default:
+        return 'var(--offline)'
+    }
+  }}
  
 `;
 
-export const Offline = styled.div`
-  width: 20px;
-  height: 20px;
-  background-color: var(--offline);
-  border-radius: 50%;
-`;
+// export const Offline = styled.div`
+
+//   background-color: var(--offline), ;
+ 
+// `;
 
 export const Name = styled.p`
   font-weight: 500;

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { Container, Friend, Online, Offline, Name } from './FriendList.styled';
+import { Container, Friend, ConditionOnline, Name } from './FriendList.styled';
 
 export default function FriendList({ friends }) {
   return (
@@ -7,7 +7,7 @@ export default function FriendList({ friends }) {
       {friends.map(({ avatar, name, isOnline, id }) => {
         return (
           <Friend key={id}>
-            <span>{isOnline ? <Online /> : <Offline />}</span>
+            <ConditionOnline type={isOnline}>{isOnline}</ConditionOnline>
             <img src={avatar} alt={name} width="48" />
             <Name>{name}</Name>
           </Friend>
