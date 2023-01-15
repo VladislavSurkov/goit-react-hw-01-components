@@ -7,7 +7,9 @@ export default function FriendList({ friends }) {
       {friends.map(({ avatar, name, isOnline, id }) => {
         return (
           <Friend key={id}>
-            <ConditionOnline type={isOnline}>{isOnline}</ConditionOnline>
+            <ConditionOnline type={isOnline.toString()}>
+              {isOnline}
+            </ConditionOnline>
             <img src={avatar} alt={name} width="48" />
             <Name>{name}</Name>
           </Friend>

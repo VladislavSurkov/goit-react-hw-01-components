@@ -34,7 +34,7 @@ export const ConditionOnline = styled.span`
 
   background-color: ${props => {
     switch (props.type){
-      case true:
+      case 'true':
         return 'var(--online)'
       default:
         return 'var(--offline)'
