@@ -10,7 +10,7 @@ export const Container = styled.section`
   box-shadow: var(--main-shadow);
 `;
 
-export const Title = styled.h2`
+export const EventName = styled.h2`
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 24px;
