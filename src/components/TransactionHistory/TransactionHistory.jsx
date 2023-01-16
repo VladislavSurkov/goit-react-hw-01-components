@@ -11,7 +11,7 @@ import {
 
 export default function TransactionHistory({ items }) {
   return (
-   <Transacrions>
+    <Transacrions>
       <TableHeader>
         <HeaderRow>
           <HeaderTitle>Type</HeaderTitle>
@@ -32,14 +32,16 @@ export default function TransactionHistory({ items }) {
         })}
       </TableBody>
     </Transacrions>
-    );
+  );
 }
 
 TransactionHistory.propTypes = {
-  items:  PropTypes.arrayOf (PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    type: PropTypes.string.isRequired,
-    amount: PropTypes.string.isRequired,
-    currency: PropTypes.string.isRequired,
-  })).isRequired
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+    })
+  ).isRequired
 };

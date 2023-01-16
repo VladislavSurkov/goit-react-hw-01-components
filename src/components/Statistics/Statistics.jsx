@@ -1,5 +1,12 @@
 import PropTypes from 'prop-types';
-import { Container, EventName, StatList, StatItem, Label, Percentage } from './Statistics.styled';
+import {
+  Container,
+  EventName,
+  StatList,
+  StatItem,
+  Label,
+  Percentage,
+} from './Statistics.styled';
 
 export default function Statistics({ title, stats }) {
   return (
@@ -28,5 +35,5 @@ Statistics.propTypes = {
       label: PropTypes.string.isRequired,
       percentage: PropTypes.number.isRequired,
     })
-  ).isRequired,
+  ).isRequired
 };
